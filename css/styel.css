@@ -39,6 +39,55 @@ header {
     z-index: 100;
 }
 
+.menu {
+    display: none;
+    color: white;
+    width: 20%;
+    font-size: 30px;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.list{
+position: relative;
+}
+.ul-list{
+    display: none;
+    width: 125px;
+    height: 270px;
+    position: absolute;
+    top: 55px;
+   
+    left: -80px;
+    border-radius: 10px;
+
+}
+.ul-list ul {
+   display: block;
+   list-style: none;
+   height: 100%;
+   background-color: #4a666a31;
+   padding: 10px;
+   border-radius: 15px;
+}
+.ul-list ul.active {
+    display: block;
+}
+.ul-list ul li{
+  margin-top: 15px;
+  text-align: center;
+}
+.ul-list ul li a{
+ text-decoration: none;
+ text-transform: uppercase;
+ color: white;
+ transition: 0.2s;
+
+}
+.ul-list ul li a:hover{
+    color: red;
+}
+
 .logo {
     width: 20%;
     height: 100%;
@@ -73,14 +122,15 @@ header {
     border-radius: 50%;
 
 }
+.ul-list{
+    display: none;
+
+}
 
 nav {
     width: 70%;
 }
 
-.menu {
-    display: none;
-}
 
 nav ul {
     justify-content: space-evenly;
@@ -292,22 +342,26 @@ nav ul a:hover {
 
 .itemAboutTow p {
     padding-top: 7px;
-    font-size: 15px;
+    font-size: 14px;
     text-transform: capitalize;
 }
 
 .infoMe {
     margin-top: 15px;
-    width: 95%;
+    width: 100%;
     height: 30%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 10px;
     border: 1px solid rgb(190, 133, 243);
     border-radius: 5px;
     text-align: start;
+}
+
+.infoOne,.infoTow{
+    width: 50%;
+   font-size: 15px;
 }
 
 span a {
@@ -316,7 +370,7 @@ span a {
 }
 
 #hed {
-    font-size: large;
+    font-size: 16px;
     color: rgba(255, 255, 255, 0.932);
 }
 
@@ -705,7 +759,7 @@ padding: 8px;
     flex-wrap: wrap;
     width: 80%;
     margin: auto;
-    height: 90%;
+    height: auto;
 }
 .itemOneContact{
     width: 40%;
@@ -817,6 +871,18 @@ border: 1px solid white;
         justify-content: space-between;
 
     }
+   
+     .ul-list {
+        display: block;   
+    }
+     .ul-list ul {
+        display: none;
+    
+    }
+
+    .menu {
+        display: block;
+    }
 
     .logo {
         flex-wrap: wrap;
@@ -838,23 +904,14 @@ border: 1px solid white;
         height: 100%;
         border-radius: 50%;
     }
-
-    .menu {
-        display: inline-block;
-        color: white;
-        width: 20%;
-        font-size: 30px;
+    nav ul{
+        display: none;
     }
 
     nav {
         width: 50%;
         display: flex;
         justify-content: end;
-    }
-
-    nav ul {
-
-        display: none;
     }
 
     .itemOne {
@@ -878,7 +935,350 @@ border: 1px solid white;
         margin: 15px;
         font-size: 13px;
     }
+    
+    /*/////////////////////////ABOUT////////////////////////////////*/
+    .itemAboutTow h1 {
+        font-size: 25px;
+    }
+    .itemAboutTow p {
+        padding-top: 5px;
+        font-size: 12px;
+    }
+    .boxAbout {
+        width: 90%;
+        height: 70%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .itemAboutOne {
+        width: 35%;
+        height: 95%;
+        outline: 3px solid #12202b;
+        box-shadow: 2px 2px 5px 2px rgb(32, 78, 78);
+        border-radius: 0px;
+    }
+    .itemAboutTow {
+        width: 60%;
+        color: rgba(223, 224, 224, 0.932);
+    }
+    .infoMe {
+        margin-top: 10px;
+        width: 90%;
+        height: 30%;
+        font-size: 12px;
+    }
+    .infoOne,.infoTow{
+        font-size: 12px;
+    }
+    #hed {
+        font-size: 13px;
+    }
+/*///////////////////////////////SERVICE/////////////////////*/
+.itemService {
+    width: 30%;
+    height: 60%;
+}
+.textService h3{
+font-size: 15px;
+}
+.textService p {
+    padding-top: 3px;
+    font-size: 12px;
+}
+/*//////////////////////////////////////////////SUNNRY///////////////////*/
+.object, .projectSummry {
+    width: 90%;
+    padding-left: 6px;
+    margin-bottom: 7px;
+    border-left: 2px solid blueviolet;
+    font-size: 12px;
+}
+}
 
 
+/*------------------------------------------700------------------------*/
 
+@media screen and (max-width: 700px) {
+    .logo{
+        width: 30%; 
+    }
+    .logo h1{
+       font-size: 18px;
+    }
+    .iconLogo {
+        width: 20%;
+        height: 40px;
+    }
+    .about {
+      padding-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: normal;
+      
+    }
+    .boxAbout {
+        width: 90%;
+        height: 70%;
+        display: inline-block;
+      
+    }
+    .itemAboutOne {
+        width: 50%;
+        height: 50%;
+        margin: auto;
+    }
+    .itemAboutTow {
+        width: 90%;
+        padding-top: 10px;
+        margin: auto;
+     
+    }
+    .circl2,.sqarOne,.sqarTow,.circl1 {
+        display: none;
+    }
+    #btunAbout {
+        margin-top: 10px;  display: inline-block;
+        width: 130px;
+        height: 35px;
+        font-size: 15px;
+    }
+    /*//////////////////////////////////////////////////////service//////////*/
+    .boxService {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: normal;
+        width: 90%;
+        height: 70%;
+        margin:20px auto;
+        font-size: 12px;
+    }
+    /*////////////////////////////////summey/////////////////*/
+    
+    .summry {
+        height: auto;
+        width: 100%;
+        background-color: #253745;
+        color: #CCD0CF;
+    }
+    .boxSummry {
+        width: 100%;
+        height: 90%;
+        margin: auto;
+        display: inline-block;
+    }
+    .itemSummryOne,.itemSummryTow {
+        padding: 10px;
+        width: 100%;
+       
+    }
+    .boxContact {
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: auto;
+        height: auto;
+    }
+}
+/*//////////////////////////////////////////600///////////////////*/
+@media screen and (max-width: 600px) {
+    .itemHome {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+    }
+    .itemOne{
+        display: none;
+    }
+    .itemTow{
+       width: 100%;
+       height: 100%;
+    }
+    .ifnoText{
+        padding: 20px;
+    }
+    .boxContact {
+        display: inline-block;
+        width: 90%;
+        margin: auto;
+       height: 70%;
+    }
+    .itemOneContact {
+        display: flex;
+     justify-content: space-around;
+        width: 80%;
+        height: 20%;
+        margin: auto;
+    }
+    .infoIconContact {
+        width: 60%;
+        font-size: 12px;
+    }
+    .iconContact {
+        font-size: 18px;
+        width: 0;
+        height: 0;
+        background-color: transparent;
+    }
+    .itemTowContact {
+       
+        width: 90%;
+        height: 80%;
+        margin: auto;
+       
+    }
+}
+/*//////////////////////////400////////////////////*/
+@media screen and (max-width: 600px) {
+    .boxHome {
+        height: 55%;
+    }
+    .ifnoText {
+        padding: 0px;
+    }
+    .ifnoText p {
+        font-size: 15px;
+        margin: 10px auto;
+    }
+
+    .ifnoText h2 {
+        font-size: 16px;
+        padding: 8px;
+    }
+    .ItemTowIcon {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        gap: 50px;
+        justify-content: center;
+        font-size: 20px;
+    }
+    .next {
+        padding-top: 0;
+        padding-right: 0;
+    }
+    #btun {
+        font-size: 16px;
+    }
+    .about {
+      height: auto;
+        width: 100%;
+       padding: 10px;
+    }
+    .service {
+        height: auto;
+        width: 100%;
+        font-family: "Nanum Gothic", sans-serif;
+    }
+    .ifoService {
+        padding-top: 30px;
+        width: 80%;
+        margin: auto;
+        height: auto;
+        font-size: 18px;
+        text-align: center;
+    }
+    .boxService {
+        width: 100%;
+        display: inline-block;
+        height: auto;
+        padding: 20px;
+      
+    }
+    
+    .itemService{
+width: 70%;
+margin: auto;
+margin-bottom: 15px;
+    }
+    .infoCard {
+        font-size: 12px;
+        margin-top: 4px;
+    }
+    .textSkills {
+      
+        width: 80%;
+        margin: auto;
+        font-size: 19px;
+    }
+    .textSkills h3{
+        font-size: 18px;
+        width: 100%;
+
+    }
+    .boxSkills {
+        width: 80%;
+        height: 60%;
+        margin: auto;
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        padding-top: 30px;
+    }
+    .itemSkillsOne, .itemSkillsTow {
+        width: 45%;
+        height: 100%;
+    }
+    .project {
+        height: 150vh;
+       
+    }
+    .boxProject {
+        width: 100%;
+        height: 95%;
+        margin: 20px auto;
+        display: inline-block;
+    }
+    .cardProject {
+        width: 70%;
+        margin: auto;
+        height: 20%;
+        margin-bottom: 15px;
+    }
+    .boxContact {
+        width: 100%;
+        height: 100%;
+    }
+    .itemOneContact {
+        display: inline-block;
+        width: 80%;
+        height: 20%;
+        margin: auto;
+    }
+    .cardContact {
+        width: 45%;
+        height: 15%;
+        margin-bottom: 5px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .contact{
+       
+        height: auto;
+
+    }
+    .itemTowContact input {
+        width: 47%;
+        height: 30px;
+        font-size: 15px; 
+    }
+    textarea {
+        margin-top: 10px;
+        width: 91%;
+        height: 25%;
+        font-size: 16px;
+    }
+    #subConatct {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 90px;
+        height: 35px;
+        border-radius: 15px;
+        background-color: rgb(59, 105, 255);
+        border: 1px solid rgb(59, 105, 255);
+        color: white;
+        font-size: 13px;
+        cursor: pointer;
+        transition: 0.4s;
+    }
 }
